@@ -1,0 +1,557 @@
+/********** Template CSS **********/
+:root {
+  --primary: #3cb815;
+  --secondary: #f65005;
+  --light: #f7f8fc;
+  --dark: #111111;
+}
+
+/*** Section Header ***/
+.section-header {
+  position: relative;
+  padding-top: 25px;
+}
+
+.section-header::before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 2px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+}
+
+.section-header::after {
+  position: absolute;
+  content: "";
+  width: 90px;
+  height: 2px;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--secondary);
+}
+
+.section-header.text-start::before,
+.section-header.text-start::after {
+  left: 0;
+  transform: translateX(0);
+}
+
+.Banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 60%;
+}
+
+.Banner nav {
+  flex: 0 0 20%;
+}
+
+div.carouselExampleDark {
+  display: flex;
+  flex: auto;
+}
+
+div.carousel-item img {
+  height: 100%;
+  width: 100%;
+}
+
+.carousel button {
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+
+button.carousel-control-prev:hover {
+  background-color: greenyellow;
+}
+button.carousel-control-next:hover {
+  background-color: greenyellow;
+}
+
+div.ContentCarousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+  padding-left: 20px;
+  width: 75%;
+  flex: 1 1 100%;
+}
+
+div.ContentCarousel h5 {
+  font-size: 80px;
+}
+
+.carousel-caption {
+  top: 20%; /* que empiece desde arriba */
+  left: 0;
+  display: flex; /* para alinear el contenido dentro */
+  align-items: center; /* centra verticalmente */
+  justify-content: flex-start; /* opcional: izquierda, center o derecha */
+  text-align: left;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+div.boton {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: left;
+  gap: 20px;
+  margin-top: 5%;
+  margin-left: 2%;
+}
+
+div.boton a#boton1 {
+  background-color: green;
+  color: white;
+  width: 15%;
+  height: 15%;
+  border-radius: 25px;
+  padding: 12px 25px;
+}
+
+div.boton a#boton2 {
+  background-color: orange;
+  color: white;
+  width: 15%;
+  height: 15%;
+  border-radius: 25px;
+  padding: 12px 25px;
+}
+
+/* <!-- Mejores Frutas Start -->*/
+
+img.FotoSeñor {
+  border-radius: 100%;
+  width: 50%;
+  padding-top: 3%;
+  padding-left: 3%;
+}
+
+div.ContenidoPrincipal {
+  padding-top: 3%;
+  padding-right: 3%;
+  display: flex;
+  gap: 5;
+  padding-bottom: 3%;
+}
+
+div.Info a {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 300px;
+  margin-top: 1%;
+  color: white;
+  background-color: green;
+  padding: 2% 5%;
+  border-radius: 50px;
+}
+
+/* --- Responsividad para la sección "Mejores Frutas" --- */
+@media (max-width: 768px) {
+  div.ContenidoPrincipal {
+    flex-direction: column; /* apila la imagen y el texto */
+    align-items: center; /* centra los contenidos */
+    text-align: center;
+  }
+
+  img.FotoSeñor {
+    width: 70%; /* más grande en móvil */
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  div.Info a {
+    width: auto; /* el botón se adapta al texto */
+    padding: 10px 20px;
+  }
+
+  div.Info {
+    padding: 0 5%; /* un poco de margen lateral */
+  }
+}
+
+@media (max-width: 480px) {
+  img.FotoSeñor {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  div.Info a {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+/*   <!-- Nos Caracteríz Start --> */
+
+div.CC {
+  padding-top: 3%;
+  background-color: #f7f8fc;
+}
+
+div.section-header {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.Contenedor {
+  display: flex;
+  align-items: center;
+  gap: 3%;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 3%;
+}
+
+.ListItem1 {
+  height: 10%;
+  width: 20%;
+  background-color: white;
+  padding: 2% 2%;
+  text-align: center;
+}
+
+.ListItem1 img {
+  padding-bottom: 10%;
+}
+
+/*
+
+<div class="PrimerLista">
+        <div class="Contenedor">
+          <div class="ListItem1">
+
+          */
+
+/* --- Responsividad para la sección "Nos Caracteríza" --- */
+@media (max-width: 992px) {
+  .Contenedor {
+    flex-wrap: wrap; /* permite que los elementos bajen */
+    gap: 20px; /* un poco más de espacio */
+  }
+
+  .ListItem1 {
+    width: 40%; /* dos por fila en tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .Contenedor {
+    flex-direction: column; /* una por fila */
+    align-items: center;
+  }
+
+  .ListItem1 {
+    width: 80%; /* más anchas en móviles */
+  }
+}
+
+@media (max-width: 480px) {
+  .ListItem1 {
+    width: 90%;
+    padding: 5%;
+  }
+
+  .ListItem1 h4 {
+    font-size: 1.1rem;
+  }
+
+  .ListItem1 p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Visita nuestras fincas Start */
+
+div.VisitaFincas {
+  background-color: #3bb814;
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3%;
+  padding-bottom: 3%;
+  flex-wrap: wrap;
+}
+
+div.InfoG h1 {
+  color: white;
+}
+
+div.InfoG {
+  color: white;
+  flex: 1 1 60%; /* ocupa 60% del ancho, pero puede reducirse en pantallas pequeñas */
+  min-width: 250px; /* evita que el texto se encoja demasiado */
+}
+
+div.Link {
+  display: flex;
+  flex: 1 1 35%; /* ocupa 35% del ancho, ajustable */
+  justify-content: center;
+  min-width: 150px; /* evita que el botón se comprima demasiado */
+  margin-top: 10px; /* espacio vertical si baja en pantallas pequeñas */
+}
+
+div.Link a {
+  color: white;
+  background-color: #f65004;
+  border-radius: 50px;
+  padding: 2% 7%;
+}
+
+/* Responsivo: en pantallas muy pequeñas, apilar */
+@media (max-width: 576px) {
+  div.VisitaFincas {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* <!-- Footer Start --> */
+
+div.CFooter {
+  background-color: rgb(0, 0, 0);
+  padding-bottom: 3%;
+  padding: 3% 0; /* ✅ agrega padding lateral y superior/inferior */
+}
+
+div.CFlex {
+  display: flex;
+  justify-content: space-between; /* ✅ reparte las columnas horizontalmente */
+  align-items: flex-start;
+  max-width: 1200px; /* ✅ ancho máximo del contenido */
+  margin: 0 auto; /* ✅ centra horizontalmente dentro del footer */
+
+  gap: 10rem;
+  color: white;
+  padding-top: 2%;
+  flex-wrap: wrap; /* permite que los bloques bajen si no caben */
+}
+
+div.CInf {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  flex: 1 1 250px; /* cada bloque mínimo 250px y se ajusta */
+}
+
+div.CInf h4 {
+  color: white;
+  padding-bottom: 5%;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  div.CFlex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  div.CInf {
+    align-items: center;
+    text-align: center;
+  }
+
+  div.CInf a.btn-link {
+    display: block;
+  }
+}
+
+/*  Empieza la galeria  */
+
+div.GalleryGrid {
+  background-color: white;
+  margin-left: 5%;
+  margin-right: 5%;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  gap: 10px;
+  padding-bottom: 3%;
+}
+
+div.Producto {
+  border: 3px solid black;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+div.Producto div img {
+  padding-bottom: 3%;
+}
+
+div.InfoProducto {
+  color: #3bb814;
+}
+
+div.InfoProducto a {
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+div.DetalleCompra {
+  display: flex;
+  gap: 50px;
+}
+
+/*   <!-- Productos Start --> */
+
+div.ContieneTodo {
+  background-color: rgb(237, 234, 234);
+  padding-top: 3%;
+}
+
+div.ContieneEncabezado {
+  background-color: #ffffff;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.encabezado {
+  text-align: left;
+  padding-left: 3%;
+}
+
+div.ContieneTipos {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+div.ContieneTipos ul {
+  list-style: none;
+  display: flex;
+  align-items: flex-end;
+  margin-top: auto; /* empuja el UL hacia abajo */
+  flex-direction: row;
+  gap: 10%;
+  justify-content: center;
+}
+
+div.ContieneTipos ul li {
+  border: 2px solid green;
+  background-color: white;
+  padding: 3%;
+}
+
+div.ContieneTipos ul li:hover {
+  background-color: green;
+}
+
+div.ContieneTipos ul li a {
+  color: black; /* texto normal */
+  text-decoration: none; /* opcional: quitar subrayado */
+}
+
+div.ContieneTipos ul li a:hover {
+  color: white; /* texto cuando haces hover */
+}
+
+/* --- Responsividad para la sección "Productos" --- */
+
+/* Cuando la pantalla sea más pequeña que 1200px (laptops) */
+@media (max-width: 1200px) {
+  .GalleryGrid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+/* Tablets (≤992px): el encabezado y tabs se apilan, y 2 columnas de productos */
+@media (max-width: 992px) {
+  .ContieneEncabezado {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .ContieneTipos ul {
+    flex-wrap: wrap;
+    gap: 5%;
+  }
+
+  .GalleryGrid {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+/* Celulares medianos (≤768px): una columna de productos */
+@media (max-width: 768px) {
+  .GalleryGrid {
+    grid-template-columns: 1fr;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .ContieneTipos ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .ContieneTipos ul li {
+    width: 60%;
+    text-align: center;
+  }
+}
+
+/* Celulares pequeños (≤480px): ajustar textos y espaciado */
+@media (max-width: 480px) {
+  .GalleryGrid {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+
+  .ContieneTipos ul li {
+    width: 80%;
+    padding: 4%;
+    font-size: 0.9rem;
+  }
+
+  .InfoProducto a {
+    font-size: 1rem;
+  }
+
+  .InfoProducto span {
+    font-size: 0.9rem;
+  }
+}
+
+div.Producto img {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  max-height: 400px; /* altura máxima */
+  object-fit: cover; /* recorta proporcionalmente si es necesario */
+  display: block;
+}
