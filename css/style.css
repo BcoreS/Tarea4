@@ -331,20 +331,20 @@ div.Link a {
 div.CFooter {
   background-color: rgb(0, 0, 0);
   padding-bottom: 3%;
-  padding: 3% 0; /* ✅ agrega padding lateral y superior/inferior */
+  padding: 3% 0;
 }
 
 div.CFlex {
   display: flex;
-  justify-content: space-between; /* ✅ reparte las columnas horizontalmente */
+  justify-content: space-between;
   align-items: flex-start;
-  max-width: 1200px; /* ✅ ancho máximo del contenido */
-  margin: 0 auto; /* ✅ centra horizontalmente dentro del footer */
+  max-width: 1200px;
+  margin: 0 auto;
 
   gap: 10rem;
   color: white;
   padding-top: 2%;
-  flex-wrap: wrap; /* permite que los bloques bajen si no caben */
+  flex-wrap: wrap;
 }
 
 div.CInf {
